@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | komugilabs</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Zen+Maru+Gothic:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #333333;
+            --text-sub: #777777;
+            --accent-pink: #d8a7b1;
+            /* 彩度を抑えた落ち着いたピンク */
+            --accent-blue: #a3c4dc;
+            /* 落ち着いたブルーグレー */
+            --light-gray: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Zen Maru Gothic', 'Quicksand', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+        }
+
+        .contact {
+            max-width: 600px;
+            margin: 4rem auto;
+        }
+
+        header {
+            padding: 2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--text-main);
+        }
+
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-pink);
+        }
+
+        .hero {
+            padding: 8rem 10%;
+            background-color: var(--light-gray);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 800px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 6rem auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .about-text {
+            margin-bottom: 4rem;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 4rem;
+            font-size: 0.75rem;
+            color: #ccc;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #d8a7b1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><a href="index.html">KOMUGILABS</a></div>
+        <nav>
+            <a href="privacy.html">Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>お問い合わせ</h1>
+        <p>ご質問やご意見がございましたら、お気軽にお問い合わせください。</p>
+        <div class="contact">
+            <form action="https://formspree.io/f/mlgvaejq" method="POST">
+                <label>お名前</label>
+                <input type="text" name="name" required>
+                <label>メールアドレス</label>
+                <input type="email" name="email" required>
+                <label>メッセージ</label>
+                <textarea name="message" rows="5" required></textarea>
+                <button type="submit">送信する</button>
+            </form>
+        </div>
+        <p><a href="index.html">← トップへ戻る</a></p>
+    </section>
+    <footer>
+        &copy; 2026 komugilabs All Rights Reserved.
+    </footer>
+</body>
+
+</html>
