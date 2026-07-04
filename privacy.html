@@ -67,14 +67,19 @@
             font-weight: 500;
         }
 
+        .hero p,
+        .hero li,
+        .hero ul {
+            max-width: 800px;
+        }
+
         .hero p {
             font-size: 1.1rem;
             color: var(--text-sub);
-            max-width: 500px;
         }
 
-        .hero li {
-            max-width: 500px;
+        .hero > p:not(.updated) {
+            color: var(--text-main);
         }
 
         .container {
@@ -89,6 +94,23 @@
             border-bottom: 1px solid var(--light-gray);
             padding-bottom: 0.5rem;
             display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .updated {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 2rem;
+        }
+
+        .app-list {
+            margin-bottom: 1rem;
         }
 
         .about-text {
@@ -106,6 +128,71 @@
             color: var(--accent-blue);
             text-decoration: none;
         }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.7;
+                letter-spacing: 0.02em;
+            }
+
+            header {
+                padding: 1rem 5%;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            .logo {
+                font-size: 1.1rem;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 0.75rem;
+            }
+
+            .hero {
+                padding: 2rem 5%;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .hero p,
+            .hero li {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+
+            .hero ul {
+                padding-left: 1.25rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-size: 1.05rem;
+                margin-top: 1.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            footer {
+                padding: 2rem 1rem;
+                font-size: 0.7rem;
+            }
+        }
     </style>
 </head>
 
@@ -121,32 +208,77 @@
     </header>
     <section class="hero">
         <h1>プライバシーポリシー</h1>
-        <p>komugilabs（以下「当方」）は、提供するアプリケーション（以下「本アプリ」）における利用者情報の取り扱いについて、以下の通りプライバシーポリシーを定めます。</p>
+        <p class="updated">最終更新日：2026年6月25日</p>
+        <p>komugilabs（以下「当方」）は、当方が提供するモバイルアプリケーション（以下「本サービス」）における利用者情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
 
-        <h2>1. 取得する情報および利用目的</h2>
-        <p>本アプリは、以下の情報を取得し、それぞれの目的で利用する場合があります。</p>
+        <h2>1. 対象となるアプリケーション</h2>
+        <p>本ポリシーは、当方が提供するすべてのアプリケーションに適用されます。現在、対象となるアプリは以下のとおりです。</p>
+        <ul class="app-list">
+            <li><strong>Omom（オムム）</strong> — 妊活記録アプリ</li>
+        </ul>
+        <p>今後、新たなアプリケーションを提供する場合も、原則として本ポリシーが適用されます。アプリごとに取り扱いが異なる場合は、本ポリシー内の該当セクションまたはアプリ内の説明にてお知らせします。</p>
+
+        <h2>2. 取得する情報（共通）</h2>
+        <p>本サービス全体として、以下の情報を取得し、それぞれの目的で利用する場合があります。</p>
         <ul>
-            <li><strong>端末情報・利用ログ:</strong> アプリの品質向上、不具合調査のため。</li>
-            <li><strong>課金情報:</strong> Apple App StoreおよびGoogle Play Storeのシステムを通じて、課金機能の提供および管理のために利用します。</li>
+            <li><strong>端末情報・利用ログ:</strong> 端末の種類、OSのバージョン、アプリのバージョン、クラッシュ情報、利用状況など。アプリの品質向上および不具合調査のため。</li>
+            <li><strong>課金情報:</strong> Apple App Store および Google Play Store の決済システムを通じて処理されます。当方がクレジットカード番号等の決済情報を直接取得することはありません。</li>
+            <li><strong>お問い合わせ情報:</strong> お問い合わせフォームからご送信いただいたお名前、メールアドレス、お問い合わせ内容。お問い合わせへの対応のため。</li>
         </ul>
 
-        <h2>2. 第三者提供の制限</h2>
+        <h2>3. アプリ別の取り扱い</h2>
+
+        <h3>Omom（オムム）</h3>
+        <p>Omom は、妊活中の記録をサポートするアプリです。Omom では、ユーザーが入力した以下の情報を、原則として<strong>お使いの端末内にのみ保存</strong>します。当方のサーバーへこれらの記録データを送信することはありません。</p>
+        <ul>
+            <li>基礎体温、生理日、排卵検査薬の結果</li>
+            <li>通院日、タイミングの記録</li>
+            <li>体調タグ、日記・メモ・チャット形式の記録内容</li>
+            <li>周期予測のための記録データ</li>
+            <li>アプリの設定情報（通知設定、テーマ設定など）</li>
+        </ul>
+        <p>Omom にはユーザー登録機能やアカウント機能はありません。記録データは端末上のローカルデータベースに保存されます。</p>
+        <p>ローカル通知機能を利用する場合、端末の通知権限を使用します。通知の内容は端末内で生成され、当方のサーバーには送信されません。</p>
+        <p>Omom 内のチャット画面に表示されるメッセージは、アプリ内の固定文言であり、AI による自動応答や外部サービスとの通信によるものではありません。</p>
+
+        <h2>4. 利用目的</h2>
+        <p>取得した情報は、以下の目的で利用します。</p>
+        <ul>
+            <li>本サービスの提供、維持、改善</li>
+            <li>不具合の調査およびサポート対応</li>
+            <li>有料機能・課金の提供および管理</li>
+            <li>お問い合わせへの対応</li>
+            <li>利用状況の分析（分析ツールを利用する場合）</li>
+        </ul>
+
+        <h2>5. 第三者提供</h2>
         <p>当方は、法令に基づく場合を除き、ご本人の同意を得ることなく利用者情報を第三者に提供することはありません。</p>
 
-        <h2>3. 広告配信・分析ツール</h2>
-        <p>本アプリでは、サービスの改善や広告配信のために、以下のツールを利用する場合があります。各ツールのプライバシーポリシーはそれぞれのサイトをご確認ください。</p>
+        <h2>6. 分析ツール・広告（利用する場合）</h2>
+        <p>本サービスの改善のため、以下のツールを利用する場合があります。各ツールのプライバシーポリシーは、それぞれの提供元のサイトをご確認ください。</p>
         <ul>
             <li>Google Analytics for Firebase</li>
             <li>Google AdMob（広告を表示する場合）</li>
         </ul>
+        <p>Omom においては、妊活記録などの入力データをこれらのツールに送信することはありません。分析ツールで取得されるのは、端末情報やアプリの利用状況に関する情報に限られます。</p>
 
-        <h2>4. プライバシーポリシーの変更</h2>
-        <p>当方は、必要に応じて本ポリシーを変更することがあります。変更した場合は本ページにて告知いたします。</p>
+        <h2>7. 安全管理措置</h2>
+        <p>当方は、利用者情報の漏えい、滅失、毀損の防止その他の安全管理のため、必要かつ適切な措置を講じます。Omom の記録データは端末内に保存されるため、端末の紛失・盗難、第三者による不正アクセス等にはご注意ください。パスコードや生体認証など、端末側のセキュリティ設定のご利用をおすすめします。</p>
 
-        <h2>5. お問い合わせ</h2>
-        <p>本ポリシーに関するお問い合わせは <a href="contact.html">Contact</a> から、<br>
+        <h2>8. データの削除</h2>
+        <p>Omom の記録データは、ユーザーご自身でアプリ内から削除できる場合があります。また、アプリのアンインストールまたは端末のデータ削除により、端末内に保存された記録データは消去されます。</p>
+
+        <h2>9. 未成年者の利用</h2>
+        <p>本サービスは、主に成人を対象としています。16歳未満の方が利用する場合は、保護者の同意のもとでご利用ください。</p>
+
+        <h2>10. プライバシーポリシーの変更</h2>
+        <p>当方は、必要に応じて本ポリシーを変更することがあります。重要な変更がある場合は、本ページでの掲示またはアプリ内での通知等によりお知らせします。変更後に本サービスを利用された場合、変更後のポリシーに同意したものとみなします。</p>
+
+        <h2>11. お問い合わせ</h2>
+        <p>本ポリシーに関するお問い合わせは <a href="contact.html">お問い合わせフォーム</a> から、<br>
             または以下のメールアドレスまでご連絡ください。</p>
-        <p><strong>Email: info@komugilabs.com</strong></p>
+        <p><strong>事業者名:</strong> komugilabs<br>
+            <strong>Email:</strong> info@komugilabs.com</p>
 
         <p style="margin-top: 3rem;"><a href="index.html">← トップへ戻る</a></p>
     </section>
